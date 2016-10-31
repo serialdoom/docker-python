@@ -11,10 +11,10 @@ default: build
 tag:
 	docker tag $(NAME) $(NAME):$(VERSION)
 	docker tag $(NAME) $(NAME):latest
-	#git tag $(VERSION)
+	git tag $(VERSION)
 
 push:
-	#git push --tags
+	git push --tags
 	docker push $(NAME):$(VERSION)
 	docker push $(NAME):latest
 
